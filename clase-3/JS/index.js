@@ -12,11 +12,11 @@
 
 //============================ Estructura FOR ==============================
 
-for(let turno = 1 ; turno <=15 ; turno++ ){
-    let name = prompt("Ingrese su nombre y apelildo");
-    let dni = parseInt (prompt ("ingrese su dni sin puntos ni comas"));
-    alert("hola " + name + " su N° de turno es: " + turno)
-}
+// for(let turno = 1 ; turno <=15 ; turno++ ){
+//     let name = prompt("Ingrese su nombre y apelildo");
+//     let dni = parseInt (prompt ("ingrese su dni sin puntos ni comas"));
+//     alert("hola " + name + " su N° de turno es: " + turno)
+// }
 
 //=========================================================================
 
@@ -67,3 +67,15 @@ for(let turno = 1 ; turno <=15 ; turno++ ){
 // }
 
 // alert("gracias por usar nuestro servicio")
+
+//============================ Estructura WHILE ==============================
+
+while(true){
+    totalBike = parseInt (prompt("Intoduce un numero (6 para salir): "));
+    if(totalBike === 6) break;
+    if(totalBike % 2 === 0){
+    document.write('<img src="descarga.png">')
+    }else{
+        document.write('<img src="mountain.png">')
+    }
+}
