@@ -39,3 +39,8 @@ function mostrar(mensaje){
 
  //========================= Funciones con parametros: Return ======================
 
+ function multiplicar (num1, num2){
+     return  num1 * num2;
+ }
+
+ let resultado = multiplicar (5, 8);
