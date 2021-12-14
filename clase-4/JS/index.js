@@ -208,7 +208,10 @@
  */
 
 //Generalmente, las funciones anonimas se asignan a variables declaradas como constantes
-const 
+// const hola = function () {
+//     return console.log("hola como andas?")
+// }
+// hola();
 
 /**
  * identificamos a las funciones de flecha como funciones anonimas de sintaxis simplificadas.
