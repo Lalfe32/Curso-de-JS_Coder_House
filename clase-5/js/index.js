@@ -1,27 +1,61 @@
-let name = "Leandro";
-let age = 21;
-let street = "71 N° 1966";
-const persona = {
-    nombre: "Leandro",
-    age: 21,
-    street: "71 N° 1966"
+// const persona = {
+//     nombre: "Leandro",
+//     age: 21,
+//     street: "71 N° 1966"
+// }
+// console.log(persona)
+
+//Formas de obtener los valores de un objeto:
+// 1- Haciendo uso de la notacion de puntos. 
+// 2 - Haciendo uso de los corchetes.
+// 3- Arbol
+
+const producto = {
+    nombre : 'fideos',
+    categoria : 'pastas',
+    precio : 40.99,
+    cantidad_Por: '100 gramos',
+    nutrientes : {
+        carbs : '25g',
+        grasas :{
+            ácidos_Grasos_Saturados:'0.4 g',	
+            ácidos_Grasos_Trans: '0 g',
+        },
+        colesterol : '29g',
+        calorias: '138',
+        potasio : '38mg',
+        proteinas :{
+            vitamina_C:	'0 mg',
+            calcio:	'12 mg',
+            hierro:	'1.5 mg',
+            vitamina_D: '4 IU',
+            vitamina_B6: '0 mg',	
+            vitamina_B12: '0.1 µg',
+            magnesio: '21 mg',	
+        }
+    },
+    prueba: function () {return 'probando'} //Funcion anonima
 }
-
-alert(persona.nombre);
-alert(persona.age);
-alert(persona.street);
-
+console.log(producto)
+//asignar valores a una propiedad
+producto.nutrientes.grasas.ácidos_Grasos_Trans = '4 g';
+console.log(producto.nutrientes.grasas)
 //================= Objetos Constructores ===============
+// const persona = (name, age, street) =>{
+//     this.name = name;
+//     this.age = age;
+//     this.street = street;
+// }
 
-function persona(name, age, street){
-    this.name = name;
-    this.age = age;
-    this.street = street;
-}
+// const persona1 = new persona ("Leandro", 21, "71 N° 1966")
+// const persona2 = new persona ("Nicolas", 23, "39 N° 1327")
+// const persona3 = new persona ("Matias", 24, "39 N° 1327")
+// function persona(name, age, street){
+//     this.name = name;
+//     this.age = age;
+//     this.street = street;
+// }
 
-const persona1 = new persona ("Leandro", 21, "71 N° 1966")
-const persona2 = new persona ("Nicolas", 23, "39 N° 1327")
-const persona3 = new persona ("Matias", 24, "39 N° 1327")
 
 //======================================================================
 
