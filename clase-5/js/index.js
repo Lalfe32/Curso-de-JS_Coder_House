@@ -10,37 +10,91 @@
 // 2 - Haciendo uso de los corchetes.
 // 3- Arbol
 
-const producto = {
-    nombre : 'fideos',
-    categoria : 'pastas',
-    precio : 40.99,
-    cantidad_Por: '100 gramos',
-    nutrientes : {
-        carbs : '25g',
-        grasas :{
-            ácidos_Grasos_Saturados:'0.4 g',	
-            ácidos_Grasos_Trans: '0 g',
-        },
-        colesterol : '29g',
-        calorias: '138',
-        potasio : '38mg',
-        proteinas :{
-            vitamina_C:	'0 mg',
-            calcio:	'12 mg',
-            hierro:	'1.5 mg',
-            vitamina_D: '4 IU',
-            vitamina_B6: '0 mg',	
-            vitamina_B12: '0.1 µg',
-            magnesio: '21 mg',	
-        }
-    },
-    prueba: function () {return 'probando'} //Funcion anonima
-}
-console.log(producto)
+// const producto ={
+//     nombre : 'fideos',
+//     categoria : 'pastas',
+//     precio : 40.99,
+//     cantidad_Por: '100 gramos',
+//     nutrientes : {
+//         carbs : '25g',
+//         grasas :{
+//             ácidos_Grasos_Saturados:'0.4 g',	
+//             ácidos_Grasos_Trans: '0 g',
+//         },
+//         colesterol : '29g',
+//         calorias: '138',
+//         potasio : '38mg',
+//         proteinas :{
+//             vitamina_C:	'0 mg',
+//             calcio:	'12 mg',
+//             hierro:	'1.5 mg',
+//             vitamina_D: '4 IU',
+//             vitamina_B6: '0 mg',	
+//             vitamina_B12: '0.1 µg',
+//             magnesio: '21 mg',
+//         }
+//     },
+//     prueba: function () {return 'probando'} //Funcion anonima
+// }
+// console.log(producto);
 //asignar valores a una propiedad
-producto.nutrientes.grasas.ácidos_Grasos_Trans = '4 g';
-console.log(producto.nutrientes.grasas)
+// producto.nutrientes.grasas.ácidos_Grasos_Trans = '4 g';
+// console.log(producto.nutrientes.grasas);
+
+//Valores en variables
+// const name = 'Leandro';
+// const age = 21;
+// const dni = 43015846;
+// const date = {
+//     name: name,
+//     age: age,
+//     dni: dni,
+// }
+// console.log(date)
+//Valores en variable - Abreviado
+// const name_2 = 'Leandro';
+// const age_2 = 21;
+// const dni_2 = 43015846;
+// const phone_2 = 2216682772;
+// const date_2 = {
+//     name_2,
+//     age_2,
+//     dni_2,
+//     phone_2,
+// }
+// console.log(date_2)
 //================= Objetos Constructores ===============
+/**
+ *  El constructor de un objeto es una función que usamos
+ *  para crea un nuevo objeto cada vez que sea necesario
+ */
+
+function persona(name, age, street){
+    this.name = name;
+    this.age = age;
+    this.street = street;
+}
+
+function auto (marca, modelo, motor) {
+    this.marca = marca;
+    this.modelo = modelo;
+    this.motor = motor;
+    
+}
+
+
+let gisela = new persona ("Gisela", 32, "71 N° 1966");
+let marcelo = new persona ("Marcelo", 57, "39 N° 1327");
+
+console.log(gisela);
+console.log(marcelo);
+
+let auto_1 = new auto ('Fiat', 147, 1.4, gisela);
+let auto_2 = new auto ('Fiat', 128, 1.6, marcelo);
+console.log(auto_1);
+console.log(auto_2);
+
+
 // const persona = (name, age, street) =>{
 //     this.name = name;
 //     this.age = age;
@@ -50,11 +104,6 @@ console.log(producto.nutrientes.grasas)
 // const persona1 = new persona ("Leandro", 21, "71 N° 1966")
 // const persona2 = new persona ("Nicolas", 23, "39 N° 1327")
 // const persona3 = new persona ("Matias", 24, "39 N° 1327")
-// function persona(name, age, street){
-//     this.name = name;
-//     this.age = age;
-//     this.street = street;
-// }
 
 
 //======================================================================
@@ -164,4 +213,4 @@ console.log(producto.nutrientes.grasas)
 //     if (cliente3.transferirDinero(entrada)){
 //         alert("EL CLIENTE " + cliente3.nombre+ " TE PUEDE PAGAR "+entrada);
 //     }
-// }
+//}
