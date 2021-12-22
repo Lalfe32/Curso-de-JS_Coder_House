@@ -69,31 +69,29 @@
  *  para crea un nuevo objeto cada vez que sea necesario
  */
 
-function persona(name, age, street){
-    this.name = name;
-    this.age = age;
-    this.street = street;
-}
+// function persona(name, age, street){
+//     this.name = name;
+//     this.age = age;
+//     this.street = street;
+// }
 
-function auto (marca, modelo, motor) {
-    this.marca = marca;
-    this.modelo = modelo;
-    this.motor = motor;
+// let gisela = new persona ("Gisela", 32, "71 N° 1966");
+// let marcelo = new persona ("Marcelo", 57, "39 N° 1327");
+
+// console.log(gisela);
+// console.log(marcelo);
+
+// function auto (marca, modelo, motor) {
+//     this.marca = marca;
+//     this.modelo = modelo;
+//     this.motor = motor;
     
-}
+// }
 
-
-let gisela = new persona ("Gisela", 32, "71 N° 1966");
-let marcelo = new persona ("Marcelo", 57, "39 N° 1327");
-
-console.log(gisela);
-console.log(marcelo);
-
-let auto_1 = new auto ('Fiat', 147, 1.4, gisela);
-let auto_2 = new auto ('Fiat', 128, 1.6, marcelo);
-console.log(auto_1);
-console.log(auto_2);
-
+// let auto_1 = new auto ('Fiat', 147, gisela);
+// let auto_2 = new auto ('Fiat', 128, marcelo);
+// console.log(auto_1);
+// console.log(auto_2);
 
 // const persona = (name, age, street) =>{
 //     this.name = name;
@@ -107,7 +105,91 @@ console.log(auto_2);
 
 
 //======================================================================
+// Operador in y for...in
+/**
+ *  Operador in devuelve true si la propiedad especificada existe en el objeto.
+ *  Bucle for...in permite acceder a todas las propiedades del objeto.
+ */
 
+// const persona_1 = {
+//     nombre: 'Leandro',
+//     calle: 71,
+//     localidad:'La Plata',
+// }
+// Va a devolver true por que la clave "calle" esta dentro del objeto persona
+// console.log('calle' in persona_1);
+//La clave "edad" no existe dentro del objeto persona por lo tanto va a devolver false.
+// console.log('edad' in persona_1);
+//con el ciclo for...in recorremos las propiedades del objeto.
+// for(const propiedad in persona_1){
+//     console.log(persona_1[propiedad]);
+// }
+
+// CLASS
+
+// Declaracion de la clase
+// class obj {
+    //Métodos
+//     tacho(){
+//         return 'tirar al tacho';
+//     }
+// }
+
+// const papel = new obj();
+// console.log(papel)
+// papel.tacho(); //"tirar al tacho"
+
+/**
+ * Crear una clase libro
+ * La clase libro tendrá: título,autor, año y género.
+ * Crear un metodo que devuelva toda la informacion del libro.
+ *  Haciendo uso de prompt, pedir los datos del libro.
+ * Validar que los campos que se piden no son vacios.
+ * Validar que el año tenga 4 digitos.
+ * Validar que el género sea: aventura, terror o ficcion.
+ * Crear un metodo que muestre la cantidad de años del libro.
+ *  - Hacer use de : new Date() .getFullYear();
+ * mostrar la informacion del libro web:
+ *  - Hacer uso de: document.getElementById().innerHTML=
+ */
+
+class Book{
+    constuctor(titulo, autor, año, genero){
+        this.titulo = titulo;
+        this.autor = autor;
+        this.año = año;
+        this.genero = genero;
+    }
+
+    getBookInfo(){
+        return this.titulo + "Tiene como autor"+ this.autor 
+                + "fue publicado el"+ this.año; 
+    }
+
+    getYears(){
+        let currentDate = new Date().getFullYear();
+        let calc = currentDate - this.año;
+        return calc;
+    }
+}
+
+let titulo = prompt('titulo');
+let autor = prompt ('autor');
+let año = prompt ('año');
+let genero = prompt('genero');
+
+let book = new Book (titulo, autor, año, genero);
+console.log(book.autor);
+console.log(book.getBookInfo());
+console.log(book.getYears());
+
+document.getElementById("title").innerHTML= book.titulo;
+document.getElementById("author").innerHTML= book.autor;
+document.getElementById("year").innerHTML= book.año;
+document.getElementById("gender").innerHTML= book.genero;
+
+
+//=================================================================================
 /**
  * actividades practicas
  */
